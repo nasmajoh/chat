@@ -20,7 +20,9 @@ func main() {
 	})
 
 	//start the web server
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	err := http.ListenAndServe(":8080", nil)
+	if err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
+
 }
